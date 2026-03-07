@@ -1,0 +1,57 @@
+name: ServerCorePlus
+version: 1.0.0
+main: de.tristan.servercoreplus.ServerCorePlusPlugin
+api-version: '1.21'
+author: Tristan + ChatGPT
+website: https://github.com/
+description: Medium-sized Paper server utility plugin with spawn, rewards, starter kit and admin commands.
+commands:
+  spawn:
+    description: Teleport to server spawn.
+    usage: /spawn
+    permission: servercoreplus.spawn
+  setspawn:
+    description: Set the server spawn.
+    usage: /setspawn
+    permission: servercoreplus.setspawn
+  starter:
+    description: Claim your starter kit.
+    usage: /starter
+    permission: servercoreplus.starter
+  daily:
+    description: Claim your daily reward.
+    usage: /daily
+    permission: servercoreplus.daily
+  rewards:
+    description: Open the rewards menu.
+    usage: /rewards
+    permission: servercoreplus.rewards
+  heal:
+    description: Heal yourself or another player.
+    usage: /heal [player]
+    permission: servercoreplus.heal
+  feed:
+    description: Feed yourself or another player.
+    usage: /feed [player]
+    permission: servercoreplus.feed
+  servercore:
+    description: Main admin command.
+    usage: /servercore reload
+    permission: servercoreplus.admin
+permissions:
+  servercoreplus.spawn:
+    default: true
+  servercoreplus.starter:
+    default: true
+  servercoreplus.daily:
+    default: true
+  servercoreplus.rewards:
+    default: true
+  servercoreplus.setspawn:
+    default: op
+  servercoreplus.heal:
+    default: op
+  servercoreplus.feed:
+    default: op
+  servercoreplus.admin:
+    default: op

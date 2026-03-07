@@ -1,0 +1,31 @@
+settings:
+  teleport-to-spawn-on-join: false
+  starter-kit-enabled: true
+  daily-reward-enabled: true
+  heal-cooldown-seconds: 45
+  feed-cooldown-seconds: 45
+  starter-kit:
+    items:
+      - material: IRON_SWORD
+        amount: 1
+      - material: BREAD
+        amount: 16
+      - material: COOKED_BEEF
+        amount: 8
+      - material: TORCH
+        amount: 32
+      - material: OAK_LOG
+        amount: 32
+  daily-reward:
+    items:
+      - material: DIAMOND
+        amount: 1
+      - material: EXPERIENCE_BOTTLE
+        amount: 8
+spawn:
+  world: world
+  x: 0.5
+  y: 64.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
