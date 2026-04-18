@@ -1,36 +1,18 @@
 # ServerCorePlus
 
-A medium-sized Paper plugin for Minecraft servers.
+This repository contains `ServerCorePlus`, a Paper plugin with a smaller server-core feature set.
 
-## Features
+It is focused on a handful of common utility systems instead of trying to cover everything: spawn handling, starter items, daily rewards, a rewards menu and a few admin commands.
 
-- `/spawn` and `/setspawn`
-- `/starter` one-time starter kit
-- `/daily` 24-hour reward system
-- `/rewards` GUI menu for claiming rewards
-- `/heal` and `/feed` with cooldowns
-- `/servercore reload`
-- Join messages
-- Player data saved in `playerdata.yml`
-- Fully configurable items and messages
+## Included systems
 
-## Tech stack
-
-- Java 21
-- Maven
-- Paper API `1.21.4-R0.1-SNAPSHOT`
-
-## Build
-
-```bash
-mvn clean package
-```
-
-The jar will be created in:
-
-```bash
-target/servercoreplus-1.0.0.jar
-```
+- spawn and setspawn
+- one-time starter kit
+- daily reward handling
+- rewards GUI
+- heal and feed commands with cooldowns
+- basic admin reload command
+- configurable messages and reward items
 
 ## Commands
 
@@ -43,27 +25,43 @@ target/servercoreplus-1.0.0.jar
 - `/feed [player]`
 - `/servercore reload`
 
-## Config files
+## Configuration
 
-- `src/main/resources/config.yml`
-- `src/main/resources/messages.yml`
+The plugin ships with:
 
-## GitHub push
+- `config.yml`
+- `messages.yml`
 
-You can use the included Windows scripts:
+The default config includes:
 
-- `setup-git.bat`
-- `push-to-github.ps1`
+- join-to-spawn toggle
+- starter kit toggle and item list
+- daily reward toggle and reward items
+- heal and feed cooldown values
+- default spawn coordinates
 
-Recommended flow:
+## Build
 
-1. Extract the zip
-2. Open the folder in Terminal
-3. Run `setup-git.bat`
-4. Create a new empty GitHub repository
-5. Run `powershell -ExecutionPolicy Bypass -File .\push-to-github.ps1`
-6. Paste your GitHub repository URL when asked
+Requirements:
+
+- Java 21
+- Maven
+- Paper API `1.21.4-R0.1-SNAPSHOT`
+
+Build command:
+
+```bash
+mvn clean package
+```
+
+The output jar is created in:
+
+```bash
+target/servercoreplus-1.0.0.jar
+```
 
 ## Notes
 
-This project is built as a classic `plugin.yml` Paper plugin with a Maven-based Paper API setup.
+- this is a classic `plugin.yml` Paper plugin
+- the repository name and the plugin name differ slightly; the plugin itself is called `ServerCorePlus`
+- the repository also includes small Windows helper scripts for initial Git setup and pushing
